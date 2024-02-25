@@ -1,0 +1,130 @@
+<% layout('/layouts/boilerplate.ejs') -%>
+<style>
+    .filters{
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+    }
+    .filter{
+        text-align: center;
+        margin-right: 2rem;
+        margin-top: 2rem;
+        opacity: 0.6;
+    }
+    .filter:hover{
+        opacity: 1;
+    }
+    i{
+        font-size: larger;
+    }
+    .filter p{
+        font-size: 0.8REM;
+    }
+    .tax-info{
+        display: none;
+        font-size: medium;
+    }
+    .taxes-toggle{
+        border: 2px solid #0d0d0d;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        height: 3rem;
+        padding: 0 1rem 0 1rem;
+        border-radius: 20px;
+        margin-left: 10rem;
+        font-size: small;
+    }
+    #flexSwitchCheckDefault{
+        padding: 0.6rem;
+    }
+</style>
+<body>
+    <div class="filters">
+        <div class="filter">
+            <div><i class="fa-solid fa-fire" style="color: #f31616;"></i></div>
+            <p>Trending</p>
+        </div>
+        <div class="filter">
+            <div><i class="fa-solid fa-person-swimming" style="color: #3300ff;"></i></div>
+            <p>Amazing Pools</p>
+        </div>
+        <div class="filter">
+            <div><i class="fa-solid fa-mountain-city" style="color: #9b4141;"></i></div>
+            <p>Mountain-City</p>
+        </div>
+        <div class="filter">
+            <div><i class="fa-regular fa-snowflake" style="color: #0d0d0d;"></i></div>
+            <p>Arctic</p>
+        </div>
+        <div class="filter">
+            <div><i class="fa-solid fa-umbrella-beach" style="color: #ebc998;"></i></div>
+            <p>Beach</p>
+        </div>
+        <div class="filter">
+            <div><i class="fa-solid fa-person-snowboarding" style="color: #389127;"></i></div>
+            <p>Surfing</p>
+        </div>
+        <div class="filter">
+            <div><i class="fa-solid fa-water" style="color: #74C0FC;"></i></div>
+            <p>Lake</p>
+        </div>
+        <div class="filter">
+            <div><i class="fa-solid fa-golf-ball-tee" style="color: #2c2d30;"></i></div>
+            <p>Golfing<p>
+        </div>
+        <div class="filter">
+            <div><i class="fa-solid fa-tree" style="color: #76c865;"></i></div>
+            <p>Tree House<p>
+        </div>
+        <div class="filter">
+            <div><i class="fa-solid fa-campground" style="color: #cead36;"></i></div>
+            <p>Camping<p>
+        </div>
+
+        <div class="taxes-toggle">
+            <div class="form-check-reverse form-switch">
+                <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+                <label class="form-check-label" for="flexSwitchCheckDefault">Display total before taxes</label>
+            </div>
+        </div>
+    </div>
+    <div class="row row-cols-lg-3 row-cols-md-2 row-cols-sm-1">
+        <% for(listing of allListing) {%>
+            <a href="/listing/<%= listing._id%>/show" class="listing-link">
+                <div class="card col listing-card">
+
+                    <img src="<%= listing.image.url%>" class="card-img-top" alt="listing-image" style="height: 20rem;">
+                    
+                    <div class="card-img-overlay"></div>
+
+                    <div class="card-body">
+                        <p class="card-text"><b><%= listing.title %></b>
+                            <br>
+                            &#8377;<%= listing.price.toLocaleString("en-IN")%>&nbsp;&nbsp;per night
+                            <i class="tax-info">&nbsp;&nbsp; +18% Gst&nbsp;&nbsp; = 
+                                &nbsp;&nbsp;<b>&#8377;<%= (Math.abs(listing.price + listing.price*0.18)).toLocaleString("en-IN")
+                                    %></b> </i>
+                        </p>
+                    </div>
+                </div>
+            </a>
+        <% } %>
+    </div>
+   <script>
+    let taxSwitch = document.getElementById("flexSwitchCheckDefault");
+    taxSwitch.addEventListener("click",()=>{
+        let taxInfo = document.getElementsByClassName("tax-info");
+        for(info of taxInfo){
+            if(info.style.display != "inline"){
+                info.style.display = "inline";
+            }
+            else{
+                info.style.display = "none";
+            }
+        }
+    })
+   </script>
+</body>
