@@ -51,7 +51,7 @@ module.exports.edit=async(req,res)=>{
     }
     let originalImageUrl = listing.image.url;
     let showUrl = originalImageUrl.replace("/update","/update/h_300,w_250");
-    res.render("listings/editListing.ejs",{listing, showUrl});
+    res.render("listings/editlisting.ejs",{listing, showUrl});
 };
 
 module.exports.update=async(req,res,next)=>{
