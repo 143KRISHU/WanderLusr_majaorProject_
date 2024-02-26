@@ -96,7 +96,8 @@ body{
 
 /* Show Page */
 .show-img{
-    height: 30vh;
+    height: 40vh;
+    background-size: cover;
 }
 
 .btns{
@@ -104,8 +105,114 @@ body{
     justify-content: space-evenly !important;
 }
 
+.review{
+    display: flex !important;
+}
+
 /* Map Style*/
 #map{
     height: 400px;
     width: 80vh;
+}
+/* Media Queries for Show Page*/
+
+@media (min-width : 770px) and (max-width: 990px){
+    #map{
+        height: 200px;
+        width: 500px;
+    }
+}
+@media (min-width : 630px) and (max-width: 770px){
+    #map{
+        height: 200px;
+        width: 470px;
+    }
+    textarea{
+        width: 340px !important;
+    }
+}
+@media (min-width : 576px) and (max-width: 630px){
+    #map{
+        height: 200px;
+        width: 400px;
+    }
+    textarea{
+        width: 340px !important;
+    }
+}
+@media (min-width : 450px) and (max-width: 576px){
+    #map{
+        height: 200px;
+        width: 400px;
+    }
+    textarea{
+        width: 340px !important;
+    }
+    .display_review{
+        display: block;
+        width: 340px !important;
+    }
+    .review_data{
+        height: 180px;
+        width: 400px;
+    }
+}
+@media (min-width: 450px) and (max-width: 555px){
+    .btns{
+        display: block !important;
+    }
+    .add-btn{
+        margin-bottom: 5px;
+        width: 128px !important;
+    }
+}
+@media (min-width : 360px) and (max-width: 450px){
+    #map{
+        height: 200px;
+        width: 270px;
+        
+    }
+    textarea{
+        width: 200px !important;
+    }
+    .display_review{
+        display: block;
+        width: 200px !important;
+    }
+    .review_data{
+        height: 180px;
+        width: 300px;
+    }
+    .btns{
+        display: block !important;
+    }
+    .add-btn{
+        margin-bottom: 5px;
+        width: 128px !important;
+    }
+}
+
+@media (max-width : 350px){
+    #map{
+        height: 200px;
+        width: 200px;
+    }
+    .display_review{
+        display: block;
+        width: 200px !important;
+    }
+    .review_data{
+        height: 200px;
+        width: 300px;
+    }
+    textarea{
+        width: 200px !important;
+    }
+    .btns{
+        display: block !important;
+    }
+    .add-btn{
+        margin-bottom: 5px;
+        width: 128px !important;
+    }
 }
