@@ -115,25 +115,53 @@ body{
     width: 80vh;
 }
 /* Media Queries for Show Page*/
-
+@media (width : 1024px){
+    #map{
+        height: 300px;
+        width: 650px;
+    }
+    textarea{
+        width: 600px !important;
+    }
+    .display_review{
+        display: block;
+        width: 600px !important;
+    }
+    .review_data{
+        height: 180px;
+        width: 600px;
+    }
+}
 @media (min-width : 770px) and (max-width: 990px){
     #map{
-        height: 200px;
-        width: 500px;
+        height: 300px;
+        width: 480px;
+    }
+    textarea{
+        width: 450px !important;
+    }
+    .display_review{
+        display: block;
+        width: 450px !important;
+    }
+    .review_data{
+        height: 180px;
+        width: 450px;
     }
 }
 @media (min-width : 630px) and (max-width: 770px){
     #map{
-        height: 200px;
+        height: 300px;
         width: 470px;
     }
     textarea{
         width: 340px !important;
     }
+
 }
 @media (min-width : 576px) and (max-width: 630px){
     #map{
-        height: 200px;
+        height: 300px;
         width: 400px;
     }
     textarea{
@@ -142,7 +170,7 @@ body{
 }
 @media (min-width : 450px) and (max-width: 576px){
     #map{
-        height: 200px;
+        height: 300px;
         width: 400px;
     }
     textarea{
@@ -158,6 +186,10 @@ body{
     }
 }
 @media (min-width: 450px) and (max-width: 555px){
+    #map{
+        height: 300px;
+        width: 340px;  
+    }
     .btns{
         display: block !important;
     }
@@ -168,9 +200,8 @@ body{
 }
 @media (min-width : 360px) and (max-width: 450px){
     #map{
-        height: 200px;
-        width: 270px;
-        
+        height: 300px;
+        width: 270px;  
     }
     textarea{
         width: 200px !important;
@@ -210,9 +241,10 @@ body{
     }
     .btns{
         display: block !important;
-    }
+        width: 200px !important;
+        height: 100px !important;}
     .add-btn{
         margin-bottom: 5px;
-        width: 128px !important;
+        width: 100px !important;
     }
 }
