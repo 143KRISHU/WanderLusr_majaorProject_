@@ -12,4 +12,8 @@ login Page: ![image](https://github.com/143KRISHU/WanderLusr_majaorProject_/asse
 
 Create New Listing Page : ![image](https://github.com/143KRISHU/WanderLusr_majaorProject_/assets/145432688/82a72721-fe34-4405-b25f-3e6fdd9ffe3b)
 
+show Listing Page Screen shot 
 
+section A :![image](https://github.com/143KRISHU/WanderLusr_majaorProject_/assets/145432688/36c7ba55-63a4-47b9-a9cc-a03b00fdf9e9)
+
+Section B : ![image](https://github.com/143KRISHU/WanderLusr_majaorProject_/assets/145432688/a20ea464-7380-4934-aa6c-37f81992c5e1)
